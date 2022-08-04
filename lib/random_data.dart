@@ -1,4 +1,4 @@
-const UI_DataList = [
+const Random_Data = [
   {
     "image": "assets/images/image_2.jpg",
     "amount": 200000,

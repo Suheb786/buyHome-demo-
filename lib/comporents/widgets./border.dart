@@ -7,12 +7,7 @@ class BorderIcon extends StatelessWidget {
   final EdgeInsets? padding;
   final double? width, height;
 
-  BorderIcon(
-      {Key? key,
-      required this.child,
-      required this.padding,
-      required this.width,
-      required this.height})
+  BorderIcon({Key? key, this.child, this.padding, this.width, this.height})
       : super(key: key);
 
   @override
