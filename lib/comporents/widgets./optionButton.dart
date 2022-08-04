@@ -1,7 +1,7 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
-
 import 'package:uifocused/comporents/constants.dart';
-
 import 'compornant.dart';
 
 class OptionButton extends StatelessWidget {
@@ -14,9 +14,9 @@ class OptionButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: width,
-      child: FlatButton(
+      child: MaterialButton(
           color: BLUE_DARK_COLOR,
           splashColor: Colors.white.withAlpha(55),
           shape:
@@ -33,7 +33,7 @@ class OptionButton extends StatelessWidget {
               addHorizontalSpace(10),
               Text(
                 text,
-                style: TextStyle(color: WHITE_COLOR),
+                style: const TextStyle(color: WHITE_COLOR),
               )
             ],
           )),

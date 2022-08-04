@@ -7,7 +7,8 @@ class BorderIcon extends StatelessWidget {
   final EdgeInsets? padding;
   final double? width, height;
 
-  BorderIcon({Key? key, this.child, this.padding, this.width, this.height})
+  const BorderIcon(
+      {Key? key, this.child, this.padding, this.width, this.height})
       : super(key: key);
 
   @override
@@ -17,7 +18,7 @@ class BorderIcon extends StatelessWidget {
         height: height,
         decoration: BoxDecoration(
             color: WHITE_COLOR,
-            borderRadius: BorderRadius.all(Radius.circular(15.0)),
+            borderRadius: const BorderRadius.all( Radius.circular(15.0)),
             border: Border.all(color: GREY_COLOR.withAlpha(40), width: 2)),
         padding: padding ?? const EdgeInsets.all(8.0),
         child: Center(child: child));

@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:uifocused/comporents/constants.dart';
 import 'package:uifocused/comporents/functions/custom_functions.dart';
+import 'package:uifocused/module/home_details.dart/home_details.dart';
 import 'package:uifocused/random_data.dart';
 import 'package:uifocused/comporents/widgets./border.dart';
 import 'package:uifocused/comporents/widgets./compornant.dart';
 import 'package:uifocused/comporents/widgets./optionButton.dart';
 
 class HomeView extends StatelessWidget {
+  const HomeView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
@@ -15,7 +18,7 @@ class HomeView extends StatelessWidget {
     final sidePadding = EdgeInsets.symmetric(horizontal: padding);
     return SafeArea(
       child: Scaffold(
-          body: Container(
+          body: SizedBox(
         width: size.width,
         height: size.height,
         child: Stack(
@@ -32,8 +35,6 @@ class HomeView extends StatelessWidget {
                       BorderIcon(
                         height: 50,
                         width: 50,
-                        key: null,
-                        padding: null,
                         child: Icon(
                           Icons.menu,
                           color: BLACK_COLOR,
@@ -42,7 +43,6 @@ class HomeView extends StatelessWidget {
                       BorderIcon(
                         height: 50,
                         width: 50,
-                        padding: null,
                         child: Icon(
                           Icons.settings,
                           color: BLACK_COLOR,
@@ -122,12 +122,12 @@ class HouseItems extends StatelessWidget {
   Widget build(BuildContext context) {
     final ThemeData themeData = Theme.of(context);
     return GestureDetector(
-      // onTap: () {
-      //   Navigator.of(context).push(MaterialPageRoute(
-      //       builder: (context) => DetailPage(
-      //             itemData: itemData,
-      //           )));
-      // },
+      onTap: () {
+        Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => HomeDetailsView(
+                  itemData: itemData,
+                )));
+      },
       child: Container(
         margin: const EdgeInsets.symmetric(vertical: 20),
         child: Column(
